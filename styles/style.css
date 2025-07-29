@@ -50,3 +50,106 @@
   font-weight: 400;
   text-transform: uppercase;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: var(--border);
+  max-inline-size: var(--card-size);
+}
+
+.card__title {
+  padding: 4px 10px;
+  font-family: inherit;
+  font-variation-settings: "wght" var(--heading-font-weight);
+  font-size: 18px;
+  border-bottom: var(--border);
+  line-height: 123%;
+}
+
+.image__conteiner {
+  position: relative;
+  width: 100%;
+  block-size: clamp(371px, calc(371px + 325 * (100vw - 375px) / 1065), 696px);
+  overflow: hidden;
+  border-bottom: var(--border);
+}
+
+.background__car {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 97%;
+  transform: scale(1.02);
+}
+
+.label__mark {
+  position: absolute;
+  mix-blend-mode: hard-light;
+  top: 23px;
+  right: 24px;
+  font-family: var(--accent-font), Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  opacity: 0.5;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+}
+
+.card__paragraph {
+  font-family: inherit;
+  font-variation-settings: "wght" var(--text-font-weigh, 400);
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__button {
+  display: flex;
+  gap: 5px;
+  justify-content: end;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  background: transparent;
+  border: var(--border);
+  cursor: pointer;
+}
+
+.card__icon-button {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  max-block-size: 38px;
+  max-inline-size: 40px;
+}
+
+.button__text {
+  font-family: var(--accent-font), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  mix-blend-mode: difference;
+}
