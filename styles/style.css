@@ -36,14 +36,14 @@
   min-inline-size: var(--card-size);
 }
 
-.header_title {
+.header__title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-family: var(--accent-font), Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
 }
 
-.header_subtitle {
+.header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-family: var(--accent-font), Arial, sans-serif;
   text-transform: uppercase;
@@ -65,7 +65,7 @@
   max-inline-size: var(--card-size);
 }
 
-.card_title {
+.card__title {
   padding: 4px 10px;
   font-family: inherit;
   font-variation-settings: "wght" var(--heading-font-weight, 700);
@@ -74,7 +74,7 @@
   line-height: 123%;
 }
 
-.image_conteiner {
+.image__conteiner {
   position: relative;
   width: 100%;
   block-size: clamp(371px, calc(371px + 325 * (100vw - 375px) / 1065), 696px);
@@ -82,7 +82,7 @@
   border-bottom: var(--border);
 }
 
-.background_car {
+.background__car {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -90,35 +90,35 @@
   transform: scale(1.02);
 }
 
-.filter_grayscale {
+.filter__grayscale {
   filter: grayscale(70%);
 }
 
-.filter_multiple {
+.filter__multiple {
   filter: contrast(50%) hue-rotate(35deg) saturate(130%);
 }
 
-.filter_hue_rotate {
+.filter__hue_rotate {
   filter: hue-rotate(210deg);
 }
 
-.filter_saturate {
+.filter__saturate {
   filter: saturate(300%);
 }
 
-.filter_invert {
+.filter__invert {
   filter: invert(64%);
 }
 
-.filter_sepia {
+.filter__sepia {
   filter: sepia(90%);
 }
 
-.filter_blur {
+.filter__blur {
   filter: blur(5px);
 }
 
-.label_mark {
+.label__mark {
   position: absolute;
   mix-blend-mode: hard-light;
   top: 23px;
@@ -135,28 +135,28 @@
 }
 
 @supports (-webkit-text-stroke: 1px #fff) {
-  .label_mark {
+  .label__mark {
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
     text-shadow: none;
   }
 }
 
-.card_content {
+.card__content {
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding: 25px;
 }
 
-.card_paragraph {
+.card__paragraph {
   font-family: inherit;
   font-variation-settings: "wght" var(--text-font-weight, 400);
   font-size: 18px;
   line-height: 21px;
 }
 
-.card_button {
+.card__button {
   gap: 5px;
   justify-content: end;
   display: flex;
@@ -170,7 +170,7 @@
   cursor: pointer;
 }
 
-.button_interaction {
+.button__interaction {
   position: relative;
   z-index: 1;
   transition: box-shadow 0.3s ease;
@@ -179,20 +179,20 @@
   background: #fff;
 }
 
-.button_interaction:focus {
+.button__interaction:focus {
   outline: none;
 }
 
-.button_interaction:focus-visible {
+.button__interaction:focus-visible {
   box-shadow: 2px 2px #000;
 }
 
-.button_interaction:focus-visible[not] {
+.button__interaction:focus-visible[not] {
   outline: none;
   box-shadow: none;
 }
 
-.button_interaction::before {
+.button__interaction::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -205,7 +205,7 @@
   block-size: 100%;
 }
 
-.button_interaction:hover::before {
+.button__interaction:hover::before {
   transform: scaleX(1);
 }
 
@@ -228,7 +228,7 @@
   border: var(--border);
 }
 
-.button_save {
+.button__save {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,7 +241,7 @@
   cursor: pointer;
 }
 
-.button_save_icon {
+.button__save-icon {
   inline-size: 21px;
   block-size: 21px;
   object-fit: contain;
@@ -272,17 +272,17 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.dialog_content {
+.dialog__content {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.dialog_save_icon {
+.dialog__save-icon {
   max-inline-size: 39px;
-} 
+}
 
-.dialog_text {
+.dialog__text {
   font-family: var(--accent-font), Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -290,7 +290,7 @@
   line-height: 150%;
 }
 
-.dialog_button {
+.dialog__button {
   text-transform: uppercase;
   border: 2px solid #000;
   color: #fff;
@@ -301,18 +301,18 @@
 }
 
 @media (width <=375px) {
-  .label_mark {
+  .label__mark {
     top: 25px;
     right: 25px;
   }
 
-  .button_save {
+  .button__save {
     flex-direction: column;
     width: 306px;
     height: 84px;
   }
 
-  .button_save_icon {
+  .button__save-icon {
     inline-size: 28px;
     block-size: 28px;
   }
