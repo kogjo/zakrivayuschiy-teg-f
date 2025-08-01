@@ -13,7 +13,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--page-font), 'Courier New', fantasy;
+  font-family: var(--page-font), sans-serif;
+  font-variation-settings: "wght" var(--text-font-weight, 400);
   background-image: var(--background-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -28,7 +29,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: --stroke-color;
   border: var(--border);
   align-items: center;
   gap: 20px;
@@ -38,14 +39,14 @@
 
 .header__title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  font-family: var(--accent-font), Arial, sans-serif;
+  font-family: var(--accent-font), sans-serif;
   text-transform: uppercase;
   font-weight: 400;
 }
 
 .header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  font-family: var(--accent-font), Arial, sans-serif;
+  font-family: var(--accent-font),  sans-serif;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -60,7 +61,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: --stroke-color;
   border: var(--border);
   max-inline-size: var(--card-size);
 }
@@ -68,10 +69,10 @@
 .card__title {
   padding: 4px 10px;
   font-family: inherit;
-  font-variation-settings: "wght" var(--heading-font-weight, 700);
   font-size: 18px;
   border-bottom: var(--border);
   line-height: 123%;
+  font-variation-settings: "wght" var(--heading-font-weight, 700);
 }
 
 .image__conteiner {
@@ -123,21 +124,21 @@
   mix-blend-mode: hard-light;
   top: 23px;
   right: 24px;
-  font-family: var(--accent-font), Arial, sans-serif;
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   text-shadow:
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff;
+    -1px -1px 0 --stroke-color,
+    1px -1px 0 --stroke-color,
+    -1px 1px 0 --stroke-color,
+    1px 1px 0 --stroke-color;
   opacity: 0.5;
 }
 
-@supports (-webkit-text-stroke: 1px #fff) {
+@supports ((text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color))) {
   .label__mark {
-    -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--stroke-color);
+    text-stroke: 1px var(--stroke-color);
     text-shadow: none;
   }
 }
@@ -151,7 +152,6 @@
 
 .card__paragraph {
   font-family: inherit;
-  font-variation-settings: "wght" var(--text-font-weight, 400);
   font-size: 18px;
   line-height: 21px;
 }
@@ -176,7 +176,7 @@
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
-  background: #fff;
+  background: --stroke-color;
 }
 
 .button__interaction:focus {
@@ -238,7 +238,7 @@
   width: 335px;
   height: 55px;
   border: var(--border);
-  background-color: #fff;
+  background-color: --stroke-color;
   margin-top: -2px;
   cursor: pointer;
 }
@@ -247,15 +247,15 @@
   inline-size: 21px;
   block-size: 21px;
   object-fit: contain;
-  color: #fff;
+  color: --stroke-color;
   mix-blend-mode: difference;
 }
 
 .button__text {
-  font-family: var(--accent-font), Arial, sans-serif;
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #fff;
+  color: --stroke-color;
   mix-blend-mode: difference;
 }
 
@@ -285,7 +285,7 @@
 }
 
 .dialog__text {
-  font-family: var(--accent-font), Arial, sans-serif;
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -295,8 +295,8 @@
 .dialog__button {
   text-transform: uppercase;
   border: 2px solid #000;
-  color: #fff;
-  background-color: #fff;
+  color: --stroke-color;
+  background-color: --stroke-color;
   cursor: pointer;
   width: 100%;
   block-size: 38px;
