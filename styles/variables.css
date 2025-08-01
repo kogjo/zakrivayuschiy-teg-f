@@ -1,16 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-
-
 :root {
-
     --page-font: 'Inter-Variable';
     --accent-font: 'PressStart2P';
-    --heading-font-weight: 715;
-    --text-font-weight: 410;
     --background-gradient: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
         repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
         linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
-
+    --heading-font-weight: 715;
+    --text-font-weight: 410;
+    --card-size: clamp(375px, 166.667px + 52.083vw, 700px);
     --border: 2px solid #000;
-    --card-size: clamp(375px, 166.667px + 52.083vw, 700px)
+    --like-border: #000;
+    --like-core: #000;
+    --effect-color: #000;
 }
