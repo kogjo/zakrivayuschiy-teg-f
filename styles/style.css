@@ -29,7 +29,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: --stroke-color;
+  background-color: var(--stroke-color);
   border: var(--border);
   align-items: center;
   gap: 20px;
@@ -46,7 +46,7 @@
 
 .header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  font-family: var(--accent-font),  sans-serif;
+  font-family: var(--accent-font), sans-serif;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -61,7 +61,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: --stroke-color;
+  background-color: var(--stroke-color);
   border: var(--border);
   max-inline-size: var(--card-size);
 }
@@ -128,10 +128,10 @@
   font-size: 14px;
   text-transform: uppercase;
   text-shadow:
-    -1px -1px 0 --stroke-color,
-    1px -1px 0 --stroke-color,
-    -1px 1px 0 --stroke-color,
-    1px 1px 0 --stroke-color;
+    -1px -1px 0 var(--stroke-color),
+    1px -1px 0 var(--stroke-color),
+    -1px 1px 0 var(--stroke-color),
+    1px 1px 0 var(--stroke-color);
   opacity: 0.5;
 }
 
@@ -176,7 +176,7 @@
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
-  background: --stroke-color;
+  background: var(--stroke-color);
 }
 
 .button__interaction:focus {
@@ -238,7 +238,7 @@
   width: 335px;
   height: 55px;
   border: var(--border);
-  background-color: --stroke-color;
+  background-color: var(--stroke-color);
   margin-top: -2px;
   cursor: pointer;
 }
@@ -247,7 +247,7 @@
   inline-size: 21px;
   block-size: 21px;
   object-fit: contain;
-  color: --stroke-color;
+  color: var(--stroke-color);
   mix-blend-mode: difference;
 }
 
@@ -255,7 +255,7 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: --stroke-color;
+  color: var(--stroke-color);
   mix-blend-mode: difference;
 }
 
@@ -295,8 +295,8 @@
 .dialog__button {
   text-transform: uppercase;
   border: 2px solid #000;
-  color: --stroke-color;
-  background-color: --stroke-color;
+  color: var(--stroke-color);
+  background-color: var(--stroke-color);
   cursor: pointer;
   width: 100%;
   block-size: 38px;
